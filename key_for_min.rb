@@ -6,9 +6,8 @@ def key_for_min_value(name_hash)
   empty_hash=nil
   i=0
   name_hash.collect do |name, value|
-    when value == i
-      puts "#{name}"
-    end
-    i = i+1
+    value == i
+    puts "#{name}"
   end
+  i = i+1
 end
