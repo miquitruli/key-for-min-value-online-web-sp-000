@@ -3,11 +3,17 @@
 
 
 def key_for_min_value(name_hash)
-  empty_hash=nil
-  i=0
-  name_hash.collect do |name, value|
-    value == i
-    puts "#{name}"
+  if name_hash.empty? == true
+    return nil
   end
-  i = i+1
+  value_answer=99999
+  name_answer=""
+  name_hash.each do |name,value|
+    puts "#{name}, #{value}"
+    if value < value_answer
+      value_answer=value
+      name_answer=name
+    end
+  end
+  return name_answer
 end
