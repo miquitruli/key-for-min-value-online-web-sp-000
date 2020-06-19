@@ -8,7 +8,7 @@ def key_for_min_value(name_hash)
   name_hash.collect do |name, value|
     when value == i
       puts "#{name}"
-      i = i+1
     end
+    i = i+1
   end
 end
