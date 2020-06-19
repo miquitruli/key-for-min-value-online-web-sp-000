@@ -4,7 +4,7 @@
 def key_for_min_value(name_hash)
   smallest = []
   name_hash.map do |key,value|
-    smallest= value.min
+    smallest= value.min.to_i
     if name_hash(smallest)==true
       puts "#{key}"
     end
